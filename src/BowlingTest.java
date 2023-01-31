@@ -40,6 +40,12 @@ public class BowlingTest {
         assertEquals(300,game.score());
     }
 
+    @Test
+    public void testOnePinPerThrow(){
+        rollMany(12,1,game);
+        assertEquals(12, game.score());
+    }
+
 
 
 
