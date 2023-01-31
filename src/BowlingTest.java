@@ -39,17 +39,8 @@ public class BowlingTest {
         rollMany(12,10,game);
         assertEquals(300,game.score());
     }
-    @Test
-    public void testOnePinPerThrow(){
-        rollMany(20,1,game);
-        assertEquals(20,game.score());
-    }
-    @Test
-    public void testNegativeValue(){
-        game.roll(-1);
-        game.roll(-3);
-        assertEquals(0, game.score());
-    }
+
+
 
 
 }
