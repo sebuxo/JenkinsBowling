@@ -18,6 +18,14 @@ public class BowlingTest {
         assertEquals(0,game.score());
     }
 
+    @Test
+    public void testSpare(){
+        game.roll(7);
+        game.roll(3);
+        game.roll(3);
+      assertEquals(16, game.score());
+    }
+
 
 
 
