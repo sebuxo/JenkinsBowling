@@ -17,6 +17,13 @@ public class BowlingGame {
         return score;
     }
 
+    private boolean isStrike(int frame) {
+        return parties[frame] == 10;
+    }
+
+    private boolean isSpare(int frame) {
+        return sumOfRolls(frame) == 10;
+    }
 
     private int sumOfRolls(int frame) {
         return parties[frame] + parties[frame + 1];
