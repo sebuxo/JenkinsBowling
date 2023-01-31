@@ -23,7 +23,7 @@ public class BowlingTest {
         game.roll(7);
         game.roll(3);
         game.roll(3);
-      assertEquals(7, game.score());
+      assertEquals(16, game.score());
     }
 
 
