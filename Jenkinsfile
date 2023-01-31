@@ -12,7 +12,7 @@ pipeline {
 
         stage('Build'){
             steps{
-            sh 'git branch'
+            sh 'git checkout dev'
                 sh 'cd src ; javac -cp "../lib/junit-4.13.1.jar" BowlingTest.java BowlingGame.java'
             }
         }
@@ -22,7 +22,7 @@ pipeline {
 
                   script {
                     try{
-                    sh 'git branch'
+                    sh 'git checkout dev'
                    sh 'cd src/ ; java -jar ../lib/junit-platform-console-standalone-1.7.0-all.jar -cp "." --select-class BowlingTest --reports-dir="reports"'
                    junit allowEmptyResults: true, testResults: '**/test-results/*.xml'
                    sh 'git checkout master'
