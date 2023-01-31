@@ -6,7 +6,7 @@ pipeline {
         stage('Checkout Codebase'){
             steps{
 
-                 git credentialsId: 'github', url: 'https://github.com/sebuxo/Bowling'
+                 git credentialsId: 'github', url: 'https://github.com/sebuxo/JenkinsBowling'
             }
         }
 
