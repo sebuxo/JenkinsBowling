@@ -26,9 +26,8 @@ pipeline {
                    junit allowEmptyResults: true, testResults: '**/test-results/*.xml'
                    sh 'git checkout master'
                    sh 'git merge dev'
+
                     }catch(Exception e){
-                    sh 'git checkout -B rejected/nobuild'
-                    sh 'git push origin -u rejected/nobuild'
 
                     throw e
                   }
