@@ -26,6 +26,14 @@ public class BowlingTest {
       assertEquals(16, game.score());
     }
 
+    @Test
+    public void testStrike(){
+        game.roll(10);
+        game.roll(3);
+        game.roll(3);
+        assertEquals(22,game.score());
+    }
+
 
 
 
