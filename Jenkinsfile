@@ -29,7 +29,7 @@ pipeline {
                    sh 'git merge dev'
                     }catch(Exception e){
                    sh 'git checkout -B rejected/nobuild'
-                   sh 'git push origin -u rejected/nobuild'
+                  // sh 'git push origin -u rejected/nobuild'
                     throw e
                   }
 
