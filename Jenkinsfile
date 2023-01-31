@@ -22,7 +22,7 @@ pipeline {
 
                   script {
                     try{
-                   sh 'cd src/ ; java -jar ../lib/junit-4.13.1.jar -cp "." --select-class BowlingTest --reports-dir="reports"'
+                   sh 'cd src/ ; java -jar ../lib/junit-platform-console-standalone-1.7.0-all.jar -cp "." --select-class BowlingTest --reports-dir="reports"'
                    junit allowEmptyResults: true, testResults: '**/test-results/*.xml'
                    sh 'git checkout master'
                    sh 'git merge dev'
