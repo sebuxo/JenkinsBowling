@@ -23,7 +23,7 @@ pipeline {
 
                   script {
                     try{
-                    sh 'git checkout origin/dev'
+                   sh 'git checkout origin/dev'
                    sh 'cd src/ ; java -jar ../lib/junit-platform-console-standalone-1.7.0-all.jar -cp "." --select-class BowlingTest --reports-dir="reports"'
                    junit allowEmptyResults: true, testResults: '**/test-results/*.xml'
                    sh 'git checkout master'
@@ -36,5 +36,6 @@ pipeline {
 
           }
     }
+}
 }
 }
