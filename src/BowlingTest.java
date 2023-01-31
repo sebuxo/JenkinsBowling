@@ -15,7 +15,7 @@ public class BowlingTest {
     @Test
     public void rollZero(){
         rollMany(20,0,game);
-        assertEquals(1,game.score());
+        assertEquals(0,game.score());
     }
 
     @Test
