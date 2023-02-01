@@ -54,6 +54,14 @@ public class BowlingTest {
         assertEquals(0, game.score());
     }
 
+    @Test
+    public void testStrikeFollowedByTwo(){
+        testStrike();
+        game.roll(3);
+        game.roll(5);
+        assertEquals(30,game.score());
+    }
+
 
 
 

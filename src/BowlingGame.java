@@ -26,7 +26,7 @@ public class BowlingGame {
             }
         }
 
-        return score;
+        return score <0? 0:score;
     }
 
     private boolean isStrike(int frame) {
