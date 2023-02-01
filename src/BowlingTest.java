@@ -62,6 +62,13 @@ public class BowlingTest {
         assertEquals(30,game.score());
     }
 
+    @Test
+    public void testScoreStrikeFollowedBySpare(){
+        testStrike();
+        testSpare();
+        assertEquals(38,game.score());
+    }
+
 
 
 
