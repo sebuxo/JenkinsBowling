@@ -47,6 +47,12 @@ public class BowlingTest {
 
     }
 
+    @Test
+    public void testNegativeValue(){
+        game.roll(-2);
+        game.roll(-4);
+        assertEquals(0, game.score());
+    }
 
 
 
