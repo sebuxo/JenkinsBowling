@@ -44,6 +44,7 @@ public class BowlingTest {
     public void testOnePinPerThrow(){
         rollMany(12,1,game);
         assertEquals(12, game.score());
+
     }
 
 
