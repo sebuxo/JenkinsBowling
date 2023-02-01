@@ -23,15 +23,19 @@ pipeline {
 
                   script {
                     try{
+
                    sh 'git checkout origin/dev'
                    sh 'cd src/ ; java -jar ../lib/junit-platform-console-standalone-1.7.0-all.jar -cp "." --select-class BowlingTest --reports-dir="reports"'
                    junit allowEmptyResults: true, testResults: '**/test-results/*.xml'
                    sh 'git checkout master'
                    sh 'git merge origin/dev'
                    sh 'git push origin -u master'
+
                     }catch(Exception e){
+
                    sh 'git checkout -B rejected/nobuild'
                    sh 'git push origin -u rejected/nobuild'
+
                     throw e
                   }
 
